@@ -3,7 +3,7 @@ export const ContactBox = () => {
         <div className="contact-box">
             <h2>Contact</h2>
             <div className="sub-box"> 
-            <form action="https://formsubmit.co/itzindara@gmail.com" method="POST" >
+            <form action="https://formsubmit.co/pavelramcas@gmail.com" method="POST" >
             <label htmlFor="Nombre">Nombre</label >
             <input type="text" name="name" />
 
