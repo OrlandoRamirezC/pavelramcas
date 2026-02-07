@@ -3,9 +3,9 @@ import { Work } from "../pages/Work";
 import { About } from "../pages/About";
 import { Contact } from "../pages/Contact";
 import { Layout } from "../layouts/Layout";
-import { createBrowserRouter } from "react-router";
+import { createHashRouter } from "react-router";
 
-export const router = createBrowserRouter([
+export const router = createHashRouter([
     {
         path: "/",
         element: <Layout />,
