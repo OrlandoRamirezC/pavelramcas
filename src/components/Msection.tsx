@@ -1,10 +1,14 @@
+import img1 from "../assets/img/1.jpeg";
+import img3 from "../assets/img/3.jpeg";
+import img4 from "../assets/img/4.jpeg";
+
 export const Msection = () => {
     return (
         <div className="box">
-            <img src="src/assets/img/1.jpeg" alt="1" />
-            <img src="src/assets/img/3.jpeg" alt="3" />
-            <img src="src/assets/img/4.jpeg" alt="4" />
-            <img src="src/assets/img/5.jpeg" alt="5" />
+            <img src={img1} alt="1" />
+            <img src={img3} alt="3" />
+            <img src={img4} alt="4" />
+            {/* <img src="src/assets/img/5.jpeg" alt="5" />
             <img src="src/assets/img/6.jpeg" alt="6" />
             <img src="src/assets/img/7.jpeg" alt="7" />
             <img src="src/assets/img/8.jpeg" alt="8" />
@@ -23,7 +27,7 @@ export const Msection = () => {
             <img src="src/assets/img/21.jpeg" alt="21" />
             <img src="src/assets/img/22.jpeg" alt="22" />
             <img src="src/assets/img/23.jpeg" alt="23" />
-            <img src="src/assets/img/24.jpeg" alt="24" />
+            <img src="src/assets/img/24.jpeg" alt="24" /> */}
         </div>
 
     );
