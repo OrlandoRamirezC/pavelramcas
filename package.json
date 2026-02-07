@@ -1,12 +1,12 @@
 {
   "name": "pavelramcas",
   "private": true,
-  "homepage": "https://orlandoramirezc.github.io/pavelramcas",
+  "homepage": "https://orlandoramirezc.github.io/pavelramcas/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "tsc -b && vite build --output public",
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
