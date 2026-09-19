@@ -58,6 +58,14 @@ nav a {
     border-radius: 8px;
     overflow: hidden;
 }
+.box-portada {
+    width: 100%;
+    margin: 0.5rem;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
 
 .box img {
     width: 100%;
