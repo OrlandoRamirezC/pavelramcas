@@ -206,7 +206,6 @@ footer {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Lato", sans-serif;
 }
 
 /* Evita desplazamiento u overflow horizontal */
@@ -218,6 +217,7 @@ html, body {
 
 body {
     display: grid;
+    font-family: "Lato", sans-serif;
     min-height: 100dvh; /* dvh se adapta mejor a la barra de navegadores móviles que 100vh */
     grid-template-areas:
         "header"
