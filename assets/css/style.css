@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Matemasie&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Matemasie&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
-* {
+*,*::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -163,7 +163,7 @@ footer {
     justify-content: center;
 }
 
-/* Tablet */
+/* Tablet 
 @media (width <=992px) {
     body {
         display: grid;
@@ -177,7 +177,7 @@ footer {
     }
 }
 
-/* Mobil */
+/* Mobil 
 @media (width <=576px) {
     body {
         display: grid;
@@ -196,5 +196,206 @@ footer {
 
     nav a {
         font-size: 1.5rem;
+    }
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Matemasie&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+/* Reseteo universal y seguro */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+}
+
+/* Evita desplazamiento u overflow horizontal */
+html, body {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+body {
+    display: grid;
+    min-height: 100dvh; /* dvh se adapta mejor a la barra de navegadores móviles que 100vh */
+    grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "footer";
+    grid-template-rows: auto auto 1fr auto; /* Permite flexibilidad real de altura */
+}
+
+header {
+    grid-area: header;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+}
+
+nav {
+    grid-area: nav;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem 1rem;
+    flex-wrap: wrap; /* Evita romper la línea si hay muchos enlaces */
+}
+
+.iconos a {
+    margin: 0 0.5rem;
+    font-size: 1.5rem;
+    color: black;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+}
+
+/* Ajuste de cajas para no sobrepasar el ancho de pantalla */
+.box {
+    width: calc(100% - 1rem);
+    margin: 0.5rem auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.box-portada {
+    width: calc(100% - 1rem);
+    margin: 0.5rem auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.box img, .box-portada img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.contact-box {
+    width: 90%;
+    max-width: 35rem;
+    margin: 20px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 2rem;
+}
+
+.contact-box h4 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.sub-box {
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #000000;
+    font-size: 1.2rem;
+}
+
+form input[type="text"],
+form input[type="email"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus {
+    border-color: #001327;
+    outline: none;
+}
+
+form input[type="submit"] {
+    margin-top: 20px;
+    padding: 12px;
+    background: #000000;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background: #ffffff;
+    color: #000000;
+}
+
+main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    font-size: 1.5rem;
+    width: 100%;
+}
+
+footer {
+    grid-area: footer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+}
+
+/* Media Query Tablet */
+@media (width <= 992px) {
+    body {
+        grid-template-rows: auto auto 1fr auto;
+    }
+}
+
+/* Media Query Móvil */
+@media (width <= 576px) {
+    body {
+        grid-template-rows: auto auto 1fr auto;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    nav a {
+        font-size: 1rem; /* Tamaño proporcional para pantallas pequeñas */
     }
 }
